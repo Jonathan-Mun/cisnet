@@ -1,0 +1,14 @@
+> Information de l'etudiant : 
+	nom 
+	post_nom
+	prenom
+	code, matricule
+	adresse mail
+	telephone
+	promotion
+	lieu_de_naissance
+	date_de_naissance
+	description
+	sexe
+	nationalité
+
