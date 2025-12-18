@@ -1,19 +1,24 @@
 > Information de l'etudiant : 
-	nom 
-	post_nom
-	prenom
-	code, matricule
-	adresse mail
-	telephone
-	promotion
-	lieu_de_naissance
-	date_de_naissance
-	description
-	sexe
-	nationalité
-	ajout
-	Age
-	adresse
+	id
+	nom (varchar)
+	post_nom (varchar)
+	prenom (varchar)
+	code, matricule (varchar)
+	adresse mail (varchar)
+	telephone (varchar)
+	promotion (int)
+	lieu_de_naissance (date)
+	date_de_naissance (date)
+	description (txt)
+	sexe enum()
+	nationalité (varchar)
+	Age (facultatif --> int)
+	adresse (varchar)
+> faculte : 
+	id
+	niveau (L1 LMD, L2 LMD, L3 LMD,...)
+	option (FASI, FASE, MEDECINE,...)
+	departement (NONE, ROBOTIQUE, DATA SCIENCE, DROIT LEGISLATIF,...)
 
 	
 
