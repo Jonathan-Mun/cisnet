@@ -12,3 +12,8 @@
 	sexe
 	nationalité
 
+
+	ajout
+	Age
+	adresse
+
