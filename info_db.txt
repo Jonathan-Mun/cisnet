@@ -20,9 +20,15 @@
 	niveau enum(L1, L2,...)
 	faculte (int) --> faculte
 	departement (if niveau == L1, L2, alors none) else : --> departement
-	frais academique (int)
+	frais academique (int) --> frais_academique
 	titulaire (int) --> etudiant
 	vice_titu (int) --> etudiant
+
+> frais_academique :
+	id
+	promotion (varchar)
+	somme_local (int)
+	somme_etranger (int)
 
 > faculte : 
 	id
