@@ -1,4 +1,4 @@
-> Information de l'etudiant : 
+> etudiant : 
 	id
 	nom (varchar)
 	post_nom (varchar)
@@ -14,11 +14,41 @@
 	nationalité (varchar)
 	Age (facultatif --> int)
 	adresse (varchar)
+
+> promotion : 
+	id
+	niveau enum(L1, L2,...)
+	faculte (int) --> faculte
+	departement (if niveau == L1, L2, alors none) else : --> departement
+	frais academique (int)
+	titulaire (int) --> etudiant
+	vice_titu (int) --> etudiant
+
 > faculte : 
 	id
-	niveau (L1 LMD, L2 LMD, L3 LMD,...)
-	option (FASI, FASE, MEDECINE,...)
-	departement (NONE, ROBOTIQUE, DATA SCIENCE, DROIT LEGISLATIF,...)
+	nom_fac (varchar)
+	doyen (int) --> professeur
+	vice_doyen (int) --> professeur
+
+> departement : 
+	id 
+	nom_departement (varchar)
+	faculte (int) --> faculte
+
+> prof : 
+	(Information essentiel du prof)
+
+> cours :
+	id 
+	nom_cours (varchar)
+	description (varchar)
+	credit (int)
+	titulaire (int) --> professeur
+	assistant (int) --> assistant
+	promotion (int) --> promotion
+
+> assistant : 
+	(Information essentiel de l'assistant)
 
 	
 
