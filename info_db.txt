@@ -36,6 +36,7 @@
 	doyen (int) --> professeur
 	vice_doyen (int) --> professeur
 
+
 > departement : 
 	id 
 	nom_departement (varchar)
