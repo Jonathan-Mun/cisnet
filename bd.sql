@@ -1,3 +1,6 @@
+     create database if not exists cisnet;
+     use cisnet;
+     
      create table if not exists professeurs
      (
      `id_professeur` INT PRIMARY KEY AUTO_INCREMENT,
