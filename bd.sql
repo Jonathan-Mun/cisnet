@@ -87,7 +87,6 @@
           `mail` VARCHAR(100) NOT NULL,
           `matricule` VARCHAR(7) NOT NULL,
           `promotion` INT NOT NULL,
-          `niveau` INT NOT NULL,
           `date_inscription` DATE NOT NULL,
           `description` TEXT,
 
