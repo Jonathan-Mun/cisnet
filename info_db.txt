@@ -55,6 +55,3 @@
 
 > assistant : 
 	(Information essentiel de l'assistant)
-
-	
-
