@@ -32,7 +32,7 @@
           `telephone` VARCHAR(15),
           `mail` VARCHAR(100),
           `role` ENUM('TA','Assistant','CT') NOT NULL DEFAULT 'Assistant',
-          `description` TEXT,
+          `description` TEXT
      );
 
      create table if not exists facultes
@@ -53,13 +53,6 @@
      foreign key (faculte) references facultes(id_faculte)
      );
 
-     create table frais_academique(
-     `id_frais` INT PRIMARY KEY AUTO_INCREMENT,
-     `montant_local` INT NOT NULL,
-     `montant_etranger` INT NOT NULL,
-     `id_promotion` INT NOT NULL,
-     foreign key (id_promotion) references promotions(id_promotion)
-     );
 
      create table if not exists promotions
           (
@@ -67,12 +60,19 @@
           `niveau` ENUM('L1', 'L2', 'L3', 'L4', 'M1', 'M2', 'D1', 'D2') NOT NULL,
           `faculte` INT NOT NULL,
           `departement` INT,
-          `frais_academique` INT NOT NULL,
-
           foreign key (faculte) references facultes(id_faculte),
-          foreign key (departement) references departements(id_departement),
-          foreign key (frais_academique) references frais_academique(id_frais)
+          foreign key (departement) references departements(id_departement)
           );
+
+     create table if not exists frais_academique(
+     `id_frais` INT PRIMARY KEY AUTO_INCREMENT,
+     `montant_local` INT NOT NULL,
+     `montant_etranger` INT NOT NULL,
+     `id_promotion` INT NOT NULL,
+     foreign key (id_promotion) references promotions(id_promotion)
+     );
+
+
 
           create table if not exists etudiants
           (
