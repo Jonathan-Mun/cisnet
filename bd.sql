@@ -72,10 +72,8 @@
      foreign key (id_promotion) references promotions(id_promotion)
      );
 
-
-
-          create table if not exists etudiants
-          (
+     create table if not exists etudiants
+     (
           `id` INT PRIMARY KEY AUTO_INCREMENT,
           `nom` VARCHAR(40) NOT NULL ,
           `postnom`VARCHAR(40) NOT NULL,
