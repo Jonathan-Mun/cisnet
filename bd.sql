@@ -73,6 +73,23 @@ CREATE TABLE frais_academique (
     FOREIGN KEY (id_promotion) REFERENCES promotions(id_promotion)
 );
 
+     create table if not exists etudiants
+     (
+          `id` INT PRIMARY KEY AUTO_INCREMENT,
+          `nom` VARCHAR(40) NOT NULL ,
+          `postnom`VARCHAR(40) NOT NULL,
+          `prenom` VARCHAR(40),
+          `sexe` ENUM('M', 'F') NOT NULL,
+          `date_de_naissance` DATE NOT NULL,
+          `lieu_de_naissance` VARCHAR(200) NOT NULL,
+          `nationalite` VARCHAR(50) NOT NULL,
+          `adresse` VARCHAR(100) NOT NULL,
+          `telephone` VARCHAR(15) NOT NULL,
+          `mail` VARCHAR(100) NOT NULL,
+          `matricule` VARCHAR(7) NOT NULL,
+          `promotion` INT NOT NULL,
+          `date_inscription` DATE NOT NULL,
+          `description` TEXT,
 -- ================= ETUDIANTS =================
 CREATE TABLE etudiants (
     id INT AUTO_INCREMENT PRIMARY KEY,
