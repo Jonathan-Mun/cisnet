@@ -1,3 +1,4 @@
+     drop database if exists cisnet;
      create database if not exists cisnet;
      use cisnet;
      
