@@ -1,0 +1,182 @@
+{
+    "1": {
+        "nom": "Algorithmique",
+        "matricule": "INF101",
+        "credits": 4,
+        "semestre": "S1",
+        "professeur": "Kabila Ilunga Jean",
+        "assistant": "Mbuyi Kalala Jean",
+        "promotion": "L1 FASI"
+    },
+    "2": {
+        "nom": "Programmation C",
+        "matricule": "INF102",
+        "credits": 3,
+        "semestre": "S1",
+        "professeur": "Kabila Ilunga Jean",
+        "assistant": "Kibonge Mavungu Claire",
+        "promotion": "L1 FASI"
+    },
+    "3": {
+        "nom": "Math\u00e9matiques Discr\u00e8tes",
+        "matricule": "MAT101",
+        "credits": 4,
+        "semestre": "S1",
+        "professeur": "Mukendi Kasongo Paul",
+        "assistant": "Lukusa Tshilengi Paul",
+        "promotion": "L1 FASI"
+    },
+    "4": {
+        "nom": "Structures de Donn\u00e9es",
+        "matricule": "INF103",
+        "credits": 4,
+        "semestre": "S2",
+        "professeur": "Kabila Ilunga Jean",
+        "assistant": "Mbuyi Kalala Jean",
+        "promotion": "L1 FASI"
+    },
+    "5": {
+        "nom": "Bases de Donn\u00e9es",
+        "matricule": "INF104",
+        "credits": 3,
+        "semestre": "S2",
+        "professeur": "Kabila Ilunga Jean",
+        "assistant": "Kibonge Mavungu Claire",
+        "promotion": "L1 FASI"
+    },
+    "6": {
+        "nom": "Syst\u00e8mes d\u2019Exploitation",
+        "matricule": "INF201",
+        "credits": 4,
+        "semestre": "S1",
+        "professeur": "Mukendi Kasongo Paul",
+        "assistant": "Mbuyi Kalala Jean",
+        "promotion": "L2 FASI"
+    },
+    "7": {
+        "nom": "R\u00e9seaux Informatiques",
+        "matricule": "INF202",
+        "credits": 3,
+        "semestre": "S1",
+        "professeur": "Mukendi Kasongo Paul",
+        "assistant": "Kibonge Mavungu Claire",
+        "promotion": "L2 FASI"
+    },
+    "8": {
+        "nom": "Programmation Java",
+        "matricule": "INF203",
+        "credits": 3,
+        "semestre": "S1",
+        "professeur": "Kabila Ilunga Jean",
+        "assistant": "Lukusa Tshilengi Paul",
+        "promotion": "L2 FASI"
+    },
+    "9": {
+        "nom": "Math\u00e9matiques Avanc\u00e9es",
+        "matricule": "MAT201",
+        "credits": 4,
+        "semestre": "S1",
+        "professeur": "Mukendi Kasongo Paul",
+        "assistant": "Lukusa Tshilengi Paul",
+        "promotion": "L2 FASI"
+    },
+    "10": {
+        "nom": "Gestion de Projet",
+        "matricule": "GES201",
+        "credits": 2,
+        "semestre": "S2",
+        "professeur": "Tshibangu Kalala Marie",
+        "assistant": "Kibonge Mavungu Claire",
+        "promotion": "L2 FASI"
+    },
+    "11": {
+        "nom": "Intelligence Artificielle",
+        "matricule": "INF301",
+        "credits": 4,
+        "semestre": "S1",
+        "professeur": "Kabila Ilunga Jean",
+        "assistant": "Mbuyi Kalala Jean",
+        "promotion": "L2 FASI"
+    },
+    "12": {
+        "nom": "Programmation Python",
+        "matricule": "INF302",
+        "credits": 3,
+        "semestre": "S1",
+        "professeur": "Kabila Ilunga Jean",
+        "assistant": "Kibonge Mavungu Claire",
+        "promotion": "L2 FASI"
+    },
+    "13": {
+        "nom": "SGBD Avanc\u00e9s",
+        "matricule": "INF303",
+        "credits": 3,
+        "semestre": "S2",
+        "professeur": "Mukendi Kasongo Paul",
+        "assistant": "Lukusa Tshilengi Paul",
+        "promotion": "L2 FASI"
+    },
+    "14": {
+        "nom": "S\u00e9curit\u00e9 Informatique",
+        "matricule": "INF304",
+        "credits": 4,
+        "semestre": "S2",
+        "professeur": "Tshibangu Kalala Marie",
+        "assistant": "Mbuyi Kalala Jean",
+        "promotion": "L2 FASI"
+    },
+    "15": {
+        "nom": "Analyse et Conception",
+        "matricule": "INF305",
+        "credits": 3,
+        "semestre": "S2",
+        "professeur": "Kabila Ilunga Jean",
+        "assistant": "Kibonge Mavungu Claire",
+        "promotion": "L2 FASI"
+    },
+    "16": {
+        "nom": "Statistiques",
+        "matricule": "MAT301",
+        "credits": 3,
+        "semestre": "S1",
+        "professeur": "Mukendi Kasongo Paul",
+        "assistant": "Mbuyi Kalala Jean",
+        "promotion": "L2 FASI"
+    },
+    "17": {
+        "nom": "Marketing Digital",
+        "matricule": "GES301",
+        "credits": 2,
+        "semestre": "S2",
+        "professeur": "Tshibangu Kalala Marie",
+        "assistant": "Lukusa Tshilengi Paul",
+        "promotion": "L2 FASI"
+    },
+    "18": {
+        "nom": "\u00c9conomie Appliqu\u00e9e",
+        "matricule": "GES302",
+        "credits": 2,
+        "semestre": "S1",
+        "professeur": "Tshibangu Kalala Marie",
+        "assistant": "Kibonge Mavungu Claire",
+        "promotion": "L1 FASI"
+    },
+    "19": {
+        "nom": "D\u00e9veloppement Web",
+        "matricule": "INF306",
+        "credits": 3,
+        "semestre": "S2",
+        "professeur": "Kabila Ilunga Jean",
+        "assistant": "Mbuyi Kalala Jean",
+        "promotion": "L1 FASI"
+    },
+    "20": {
+        "nom": "Syst\u00e8mes Distribu\u00e9s",
+        "matricule": "INF307",
+        "credits": 4,
+        "semestre": "S2",
+        "professeur": "Mukendi Kasongo Paul",
+        "assistant": "Lukusa Tshilengi Paul",
+        "promotion": "L2 FASI"
+    }
+}

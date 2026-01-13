@@ -39,6 +39,7 @@ CREATE TABLE assistants (
 CREATE TABLE facultes (
     id_faculte INT AUTO_INCREMENT PRIMARY KEY,
     nom_faculte VARCHAR(100) NOT NULL,
+    abreviation VARCHAR(10) NOT NULL,
     doyen INT NOT NULL,
     vice_doyen INT NOT NULL,
     FOREIGN KEY (doyen) REFERENCES professeurs(id_professeur),
@@ -90,37 +91,23 @@ CREATE TABLE frais_academique (
           `promotion` INT NOT NULL,
           `date_inscription` DATE NOT NULL,
           `description` TEXT,
--- ================= ETUDIANTS =================
-CREATE TABLE etudiants (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nom VARCHAR(40) NOT NULL,
-    postnom VARCHAR(40) NOT NULL,
-    prenom VARCHAR(40),
-    sexe ENUM('M','F') NOT NULL,
-    date_de_naissance DATE NOT NULL,
-    lieu_de_naissance VARCHAR(200) NOT NULL,
-    nationalite VARCHAR(50) NOT NULL,
-    adresse VARCHAR(100) NOT NULL,
-    telephone VARCHAR(15),
-    mail VARCHAR(100) NOT NULL,
-    matricule VARCHAR(7) NOT NULL UNIQUE,
-    promotion INT NOT NULL,
-    date_inscription DATE NOT NULL,
-    description TEXT,
-    FOREIGN KEY (promotion) REFERENCES promotions(id_promotion)
-);
 
--- ================= COURS =================
-CREATE TABLE cours (
-    id_cours INT AUTO_INCREMENT PRIMARY KEY,
-    intitule VARCHAR(100) NOT NULL,
-    code_cours VARCHAR(10) NOT NULL UNIQUE,
-    credit INT NOT NULL,
-    semestre ENUM('S1','S2') NOT NULL,
-    professeur INT NOT NULL,
-    assistant INT,
-    promotion INT NOT NULL,
-    FOREIGN KEY (professeur) REFERENCES professeurs(id_professeur),
-    FOREIGN KEY (assistant) REFERENCES assistants(id_assistant),
-    FOREIGN KEY (promotion) REFERENCES promotions(id_promotion)
-);
+          foreign key (promotion) references promotions(id_promotion)
+          ); 
+
+     create table if not exists cours
+          (
+          `id_cours` INT PRIMARY KEY AUTO_INCREMENT,
+          `intitule` VARCHAR(100) NOT NULL,
+          `code_cours` VARCHAR(10) NOT NULL,
+          `credit` INT NOT NULL,
+          `semestre` ENUM('S1', 'S2') NOT NULL,
+          `professeur` INT NOT NULL,
+          `assistant` INT,
+          `promotion` INT NOT NULL,   
+
+          foreign key (promotion) references promotions(id_promotion),
+          foreign key (professeur) references professeurs(id_professeur),
+          foreign key (assistant) references assistants(id_assistant)
+          );
+     
