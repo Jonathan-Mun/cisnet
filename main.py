@@ -5,7 +5,7 @@ from mysql.connector import Error
 def connect_to_database():
 	try:
 		connection = mysql.connector.connect(
-			host='localhost',  # à adapter selon votre config
+			host='localhost',
 			user='root',
 			password='root1234',
 			database='cisnet'
@@ -60,6 +60,27 @@ def list_cours(connection):
 		return dict_cours
 	except Error as e:
 		print(f"Erreur lors de la récupération des cours : {e}")
+def connexion(connexion):
+	print("1. Se connecter")
+	print("2. Quitter")
+	choix = input("Choisissez une option : ")
+	return choix
+	
+
+
+
+def menu_principal():
+	print("1. Lister les cours")
+	print("2. Quitter")
+	choix = input("Choisissez une option : ")
+	return choix
+
+
+
+
+
+
+
 
 if __name__ == "__main__":
 	conn = connect_to_database()

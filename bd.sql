@@ -91,6 +91,7 @@ CREATE TABLE frais_academique (
           `promotion` INT NOT NULL,
           `date_inscription` DATE NOT NULL,
           `description` TEXT,
+          `password` VARCHAR(255) NOT NULL default '123456789',
 
           foreign key (promotion) references promotions(id_promotion)
           ); 
@@ -110,4 +111,3 @@ CREATE TABLE frais_academique (
           foreign key (professeur) references professeurs(id_professeur),
           foreign key (assistant) references assistants(id_assistant)
           );
-     
