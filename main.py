@@ -1,7 +1,8 @@
 import json
 import mysql.connector
 from mysql.connector import Error
-
+import os
+import time
 def connect_to_database():
 	try:
 		connection = mysql.connector.connect(
@@ -60,22 +61,37 @@ def list_cours(connection):
 		return dict_cours
 	except Error as e:
 		print(f"Erreur lors de la récupération des cours : {e}")
-def connexion(connexion):
+
+def clear_screen():
+	os.system('cls' if os.name == 'nt' else 'clear')
+
+def cisnet_connection(connexion):
 	print("1. Se connecter")
 	print("2. Quitter")
 	choix = input("Choisissez une option : ")
-	return choix
-	
-
-
-
-def menu_principal():
-	print("1. Lister les cours")
-	print("2. Quitter")
-	choix = input("Choisissez une option : ")
-	return choix
-
-
+	clear_screen()
+	if choix == '1':
+		cursor = connexion.cursor()
+		username = input("votre matricule ou email: ")
+		password = input("Mot de passe: ")
+		cursor.execute("SELECT matricule, mail, password FROM etudiants WHERE (matricule = %s or mail = %s) and password = %s", (username, username, password))
+		result = cursor.fetchone()
+		clear_screen()
+		if result:
+			cursor.execute("SELECT nom FROM etudiants")
+			etudiant_nom = cursor.fetchone()[0]
+			print(f"Connexion réussie. Bienvenue, {etudiant_nom}!")
+			input("Appuyez sur Entrée pour continuer...")
+			clear_screen()
+		else:
+			print("Échec de la connexion. Nom d'utilisateur ou mot de passe incorrect.")
+			time.sleep(2)
+			clear_screen()
+			cisnet_connection(connexion)
+	elif choix == '2':
+		print("Au revoir!")
+	else:
+		print("Option invalide. Veuillez réessayer.")
 
 
 
@@ -85,11 +101,5 @@ def menu_principal():
 if __name__ == "__main__":
 	conn = connect_to_database()
 	if conn:
-		cours = list_cours(conn)
-		print(cours)
+		cisnet_connection(conn)
 		conn.close()
-		# stock le cours dans un fichier json
-
-		with open('cours.json', 'w') as f:
-			json.dump(cours, f, indent=4)
-		print('Connexion fermée.')
